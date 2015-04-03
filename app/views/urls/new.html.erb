@@ -1,2 +1,11 @@
-<h1>Urls#new</h1>
-<p>Find me in app/views/urls/new.html.erb</p>
+<h1>New Ritly URL</h1>
+
+<br/>
+
+<%= form_for @url do |f| %>
+  <b><%= f.label :link, "URL To Shorten:" %></b>
+  <%= f.url_field :link %>
+
+  <br/>
+  <%= f.submit "Create URL" %>
+<% end %>
